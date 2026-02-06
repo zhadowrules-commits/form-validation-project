@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Create Account</h1>
+        <p>Join our community today</p>
+        <form action="backend.js" id="myform" onsubmit="validateForm(event)">
+            <div>
+                <label for="#fullName">Full Name</label>
+                <input type="text" id="fullName">
+                <small class="warning warning1">Please enter your first and last name</small>
+            </div>
+            <div>
+                <label for="#email">Email</label>
+                <input type="email" id="email">
+                <small class="warning warning2">Email is required</small>
+            </div>
+            <div>
+                <label for="#password">Password</label>
+                <input type="password" id="password" class="pw-field">
+                <small class="warning warning3">Password is required</small>
+            </div>
+            <div style="margin-bottom: 0;">
+                <label for="#confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" class="pw-field">
+                <small class="warning warning4">Please confirm password</small>
+                <small class=" warning warning5">Passwords are not the same</small>
+            </div>
+            <a href="javascript:void(0)" id="multiToggle" onclick="toggleAllPasswords()">Show Passwords</a>
+
+            <div style="display: flex; flex-direction: row; margin-bottom: 0;">
+                <input type="checkbox" id="terms">
+                <p style="font-size: small;">I agree to <a href="#">Terms and Conditions</a></p>
+            </div>
+            <small class="warning warning6" style="width: 100%;">You must agree to Terms and Conditions</small>
+
+            <button type="submit" id="submit">Create Account</button>
+        </form>
+    </div>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
